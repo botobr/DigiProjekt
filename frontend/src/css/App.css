@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2a0640, #14021f 70%);
+  color: #f0e4f8;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.hero {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.hero-star {
+  margin: 0;
+  color: #a877c3;
+  font-size: 40px;
+  text-shadow: 0 0 20px #a877c3;
+}
+
+.hero h1 {
+  margin: 10px 0;
+  color: #fff;
+  font-size: clamp(32px, 6vw, 56px);
+}
+
+.hero-sub {
+  color: #c9b0dc;
+  font-size: 18px;
+}
+
+.countdown {
+  margin: 36px 0;
+}
+
+.countdown strong {
+  display: block;
+  color: #a877c3;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.countdown span {
+  color: #c9b0dc;
+}
+
+.page h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 34px;
+}
+
+.lead {
+  margin: 0 0 32px;
+  color: #c9b0dc;
+}
+
+.calendar-progress {
+  margin: -16px 0 24px;
+  color: #a877c3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  background: #440b63;
+  border: 1px solid rgba(168, 119, 195, 0.25);
+  border-radius: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(90, 27, 124, 0.5);
+}
+
+.card h3 {
+  margin: 14px 0 6px;
+  color: #fff;
+}
+
+.card p {
+  margin: 0;
+  color: #c9b0dc;
+}
+
+.event-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #a877c3;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.recipe-card {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.recipe-detail {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: block;
+  margin-bottom: 32px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #a877c3;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.recipe-content {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  gap: 32px;
+  padding: 24px;
+  background: #440b63;
+  border: 1px solid rgba(168, 119, 195, 0.25);
+  border-radius: 20px;
+}
+
+.recipe-content h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.recipe-content p,
+.recipe-content li {
+  color: #c9b0dc;
+  line-height: 1.6;
+}
+
+.recipe-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tag {
+  padding: 4px 12px;
+  background: #5a1b7c;
+  border-radius: 999px;
+  color: #a877c3;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doors {
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+}
+
+.door {
+  aspect-ratio: 1;
+  padding: 8px;
+  background: #5a1b7c;
+  border: 1px solid rgba(168, 119, 195, 0.35);
+  border-radius: 18px;
+  color: #a877c3;
+  cursor: pointer;
+  font: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.door:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 22px rgba(168, 119, 195, 0.45);
+}
+
+.door.locked {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.door.locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.door.open {
+  background: #440b63;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 12px 26px;
+  background: #5a1b7c;
+  border: 1px solid rgba(168, 119, 195, 0.4);
+  border-radius: 999px;
+  color: #a877c3;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 22px rgba(168, 119, 195, 0.55);
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.login-card {
+  width: min(100%, 420px);
+  padding: 40px;
+  background: rgba(68, 11, 99, 0.9);
+  border: 1px solid rgba(168, 119, 195, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+.login-card h1 {
+  margin: 8px 0;
+  color: #fff;
+  font-size: 34px;
+}
+
+.login-card .lead {
+  margin-bottom: 28px;
+}
+
+.login-form {
+  display: grid;
+  gap: 10px;
+}
+
+.login-form label {
+  color: #f0e4f8;
+  font-weight: 600;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  background: #2a0640;
+  border: 1px solid rgba(168, 119, 195, 0.4);
+  border-radius: 10px;
+  color: #fff;
+  font: inherit;
+}
+
+.login-form input:focus {
+  outline: 2px solid #a877c3;
+  outline-offset: 2px;
+}
+
+.login-submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login-notice {
+  margin: 22px 0 0;
+  color: #e3c9f0;
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 28px 22px;
+  }
+
+  .recipe-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

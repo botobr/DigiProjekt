@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 16px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+.nav {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 12px 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #440B63;
+  border: 1px solid rgba(168, 119, 195, 0.25);
+  border-radius: 999px;
+  box-shadow: 0 10px 40px rgba(68, 11, 99, 0.45);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.star {
+  color: #A877C3;
+  font-size: 22px;
+  text-shadow: 0 0 12px #A877C3;
+  animation: glow 3s ease-in-out infinite;
+}
+@keyframes glow {
+  50% { opacity: 0.55; }
+}
+.links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.links button:not(.btn) {
+  display: block;
+  padding: 8px 16px;
+  color: #d9c3ea;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 999px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+.links button:not(.btn):hover,
+.links button.active {
+  background: rgba(168, 119, 195, 0.18);
+  color: #fff;
+}
+.btn {
+  background: #5A1B7C;
+  color: #A877C3;
+  border: 1px solid rgba(168, 119, 195, 0.4);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+.btn:hover {
+  box-shadow: 0 0 22px rgba(168, 119, 195, 0.55);
+  transform: translateY(-1px);
+}
+.burger, .mobile-btn { display: none; }
+
+@media (max-width: 760px) {
+  .nav { border-radius: 28px; padding: 10px 12px 10px 20px; }
+  .desktop-btn { display: none; }
+  .burger {
+    display: block;
+    background: none;
+    border: none;
+    color: #A877C3;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 12px;
+    background: #440B63;
+    border: 1px solid rgba(168, 119, 195, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(68, 11, 99, 0.45);
+  }
+  .links.open { display: flex; }
+  .mobile-btn { display: block; padding: 8px 4px 4px; }
+  .mobile-btn .btn { width: 100%; }
+}
